@@ -14,11 +14,6 @@ function searchCountries() {
             return resp.json();
         })
         .then(showCountriesList);
-    // fetch(urlFlag + )
-    //     .then(function(resp) {
-    //         return resp.json();
-    //     })
-    //     .then(showCountriesList);
 }
 function showCountriesList(resp) {
   countriesList.innerHTML = '';
@@ -45,11 +40,11 @@ function showCountriesList(resp) {
           countriesList.appendChild(regionEl);
 
           // ***FLAG
-          // Tworzymy link oraz napis z małych iter dla zmiennej
+
           var svgId = item.alpha3Code;
           svgId = svgId.toLowerCase();
           flagSrc = urlFlag + svgId + ".svg";
-          //Nie nadajemy bezpośrednio z alfa żeby były małe literki
+
           var flagId = svgId+'-flag'
           var imgEl = document.createElement('img');
           imgEl.setAttribute('id', flagId);
